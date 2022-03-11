@@ -36,11 +36,13 @@ const switchTab = (id) => {
         document.getElementById( "posts" ).style.display = "grid";
         document.getElementById( "liked" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
+        document.getElementById('header').innerText='';
     } else if (id === "liked") {
       // 
         let like=document.getElementById( "liked" );
         like.style.display = "block";
 
+        document.getElementById('header').innerText='Liked posts';
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
         // 5 . problem solving done
@@ -51,6 +53,7 @@ const switchTab = (id) => {
         let report=document.getElementById( "reported" );
         report.style.display = "block";
 
+        document.getElementById('header').innerText='Reported posts';
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
         // 6 . problem solving done
